@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)WMS.html -->
+<html><style>::-webkit-scrollbar{width: 13px;height: 13px;box-sizing: border-box}::-webkit-scrollbar-button{width: 13px;height: 13px;background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAAArCAYAAAAEw7SsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjUzODBCNTAyNUM0NTExRUE5QzkxQzcxRTVCODdENDFDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjUzODBCNTAzNUM0NTExRUE5QzkxQzcxRTVCODdENDFDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTM4MEI1MDA1QzQ1MTFFQTlDOTFDNzFFNUI4N0Q0MUMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTM4MEI1MDE1QzQ1MTFFQTlDOTFDNzFFNUI4N0Q0MUMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5TAov4AAADYElEQVR42uxbv4sTQRid7C1cQK4Q7IWs4JVaqOApwpnOQlELwUIUMYqH2ogIWimI2Ig/0ATxsBAsVLSwi4KcJ3hpLC1M4T/gFUG4FJf4PncS1s3MZmd2drO5zIMH2ex+czdvv/mxL98Wut0uMwnP84KH0+AMWAQdsAOugS2w3buo2WzqtDcli0F7v9gI4KbUbgHczDseBAmwiZMEXQW7CdrLFdISM07He+d/G2pvKCqVivRctVqNjK3X6wPflcvl/46dFIScVuj4DL/eVHv5yMyQ8nvAD+AR8IvsTgzJOKYgaFujvU/gNbCh0e8f4Nlg30zEijJzH/gevA++BecV/1jR8PWy8zfBJ+AODUEugq950hiLFYn5DDwJ3gaPgbWolVOAqdDnz+BufjzHM0p2vQiyqWgZfAEuagjyEXzER5+xWNECNBv4vARuSzCNrIPXwae806fAC4ptdCSC0w06DZ7T+L/2g5f4NGYsNo0FKIyvtJCCZ/hcozrHrUm+vwcuaM6ZdGNPaM6Z0lhXcXHRBXV4p2Zsi+9Lw5jnma+D7WnEZpGZSdHmgoqmkCTTj/FYl40HVjW3XUob8yjEGbnjImaXPyn9ifNsPioUTBsdkwzHSmDFtGJudPQXoCh7ysRqaDPTQi8zQxBacCqYxExPw4KzwzyApBZcEBT3k/lOC+Eg883ViRnmpi04ssjegA+Y7/Icn7Q50yTIDD4KvgMPgd82vJgpLwa0iG2xWyOL2LBGh81MK6YV00JhNfc8b6tq0KiqzLLEEF1o/zxQzefafNJ+shuo5hs7MeNUo4WRpPotBvrVfM6YZ0deYv9V88kyk4qhFvlzdcNUBqlmVATIyapp+gZJYveCd8ADIkFFmbmL+c7RcxoFvIE8gSzCV8yvM8oylnShgq2rkvNFkZh3wcvgQ/A8vxN5suDIMCEHainj2BofrSuybabDBss9aBgs888rPKXXQ9uCuAhacDfAl8wv3koCcp4W+I3JMpaymar45iTnOw6TV5nJoHp9z4K7Ah5mmj+DBEAWHnmijzOO/c78cshbMl1cJq8yk6EV56LQ4mLagqP2ZkcQ22Dyn3FaDpNXmcmEbNs9u1iXQqlUooM479n0d/pRL0FNyOOkUJfePlNUZSZ9o8xC/Gz+V4ABAK3g3ANnIVwYAAAAAElFTkSuQmCC);background-color: #f0f0f0;background-repeat: no-repeat}::-webkit-scrollbar-button:vertical:start{background-position: 0 -15px}::-webkit-scrollbar-button:vertical:start:visited{background-position: 0 -15px}::-webkit-scrollbar-button:vertical:start:hover{background-position: 0 -30px}::-webkit-scrollbar-button:vertical:start:active{background-position: 0 -30px}::-webkit-scrollbar-button:vertical:start:window-inactive{background-position: 0 0}::-webkit-scrollbar-button:vertical:end{background-position: -20px -15px}::-webkit-scrollbar-button:vertical:end:hover{background-position: -20px 0}::-webkit-scrollbar-button:vertical:end:active{background-position: -20px 0}::-webkit-scrollbar-button:vertical:end:window-inactive{background-position: -20px -30px}::-webkit-scrollbar-button:horizontal:start{background-position: -55px -30px}::-webkit-scrollbar-button:horizontal:start:hover{background-position: -70px -30px}::-webkit-scrollbar-button:horizontal:end{background-position: -55px 0}::-webkit-scrollbar-button:horizontal:end:hover{background-position: -40px 0}::-webkit-scrollbar-button:horizontal:increment:window-inactive{background-position: -70px 0}::-webkit-scrollbar-button:horizontal:decrement:window-inactive{background-position: -40px -30px}::-webkit-scrollbar-corner{background-color: #f0f0f0;-webkit-border-radius: 1px}::-webkit-scrollbar-thumb{box-shadow: inset 0 0 0 9px #c6c6c6;border: 2px solid #f0f0f0;-webkit-border-radius: 5px}::-webkit-scrollbar-thumb:hover{-webkit-border-radius: 6px;border-width: 1px;box-shadow: inset 0 0 0 9px #adadad}::-webkit-scrollbar-track-piece{background-color: #f0f0f0}::-webkit-scrollbar-track-piece:disabled{display: none}</style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+
+  <title>WMS</title>
+
+      <link rel="stylesheet" href="./WMS_files/style.css">
+
+  
+</head>
+
+<body>
+
+<div class="topnav">
+    <a href="" style="float: left;font-size: larger;">WMS</a>
+    <a href="http://hmcl.huangyuhui.net/download/" style="font-size: large;"><img src="./WMS_files/download.svg" alt="download"></a>
+    <a href="" style="font-size: large;"><img src="./WMS_files/home (2).svg" alt="home"></a>
+</div>
+<div class="header">
+    <h1 style="color: rgb(0, 0, 0);">WMS</h1>
+    <h1 style="color: rgb(0, 0, 0);">建筑 | 生存 --- 1.16.5插件服</h1>
+</div>
+<br>
+<div>
+
+  <h1>加入服务器</h1><br>
+</div>
+<div class="container">
+  
+  <ul>
+    <li class="out-left">
+      <a class="normal" href="">
+        <svg class="dfnb3" viewBox="0 0 80 76" x="0px" y="0px">
+          <g>
+            
+          </g>
+        </svg>
+      </a>
+      <div class="info">
+        <h3>服务器版本</h3><br>
+        <p>Java版：1.16.5</p>
+        <p>基岩版：</p>
+      </div>
+    </li>
+    <li class="out-left">
+      <a class="normal" href="">
+        <svg class="dfnb2" viewBox="0 0 80 76" x="0px" y="0px">
+          <g>
+          </g>
+
+        </svg>
+      </a>
+      <div class="info">
+        <h3>Java版服务器IP</h3>
+        <p>cn-cd-dx-2.natfrp.cloud:32510</p>
+      </div>
+    </li>
+    <li class="out-bottom">
+      <a class="normal" href="">
+        <svg class="dfnb1" viewBox="0 0 80 76" x="0px" y="0px">
+          <g>
+            
+          </g>
+        </svg>
+      </a>
+      <div class="info">
+        <h3>基岩版服务器IP(暂无)</h3>
+        <p></p>
+        <p>端口:</p>
+      </div>
+      
+    </li>
+    <li class="out-left">
+      <a class="normal" href="">
+        <svg class="dfnb" viewBox="0 0 80 76" x="0px" y="0px">
+          <g>
+            
+          </g>
+        </svg>
+      </a>
+      <div class="info">
+        <h3>服务器核心</h3>
+        <p>Spigot</p>
+      </div>
+    </li>
+    <li class="out-bottom">
+  </li></ul>
+  <div class="all">
+    <h1>关于我们</h1><br><br>
+    <div class="about">
+    <br>
+      <img src="./WMS_files/server (4).svg" alt="srever"><br>
+      <h2>高性能服务器</h2>
+      <p><p>
+      <p></p>
+    </div>
+    <div class="team">
+    <br>
+      <img src="./WMS_files/users.svg" alt="srever"><br>
+      <h2></h2>
+      <p></p>
+    </div>
+    <div class="call">
+    <br>
+      <img src="./WMS_files/phone (1).svg" alt="srever"><br>
+      <h2>联系我们</h2>
+      <p>QQ群:681752696</p>
+      <p>QQ频道:暂无</p>
+    </div>
+    <div class="serverlist">
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <h1>服务器列表</h1>
+      <br>
+      <div class="list">
+          <h3 style="font-family: &#39;Franklin Gothic Medium&#39;, &#39;Arial Narrow&#39;, Arial, sans-serif;">生存服</h3>
+          <p>这是一个巨大的且开放的区域，玩家可以在这里大展身手</p>
+      </div>
+      <div class="list2">
+        <h3 style="font-family: &#39;Franklin Gothic Medium&#39;, &#39;Arial Narrow&#39;, Arial, sans-serif;">wms_2b2t 1.12.2服务器</h3>
+        <p>服务器链接:cn-cd-dx-1.natfrp.cloud:25655</p>
+      </div>
+      <div class="list3">
+        <h3 style="font-family: &#39;Franklin Gothic Medium&#39;, &#39;Arial Narrow&#39;, Arial, sans-serif;"></h3>
+        <p></p>
+      </div>
+      <div class="list4">
+        <h3 style="font-family: &#39;Franklin Gothic Medium&#39;, &#39;Arial Narrow&#39;, Arial, sans-serif;"></h3>
+        <p></p>
+      </div>
+      <br><br><br><br><br><br><br><br><br><br>
+      <p style="color: rgb(179, 179, 179);;">——更多领域正在开发中...——</p>
+    </div>
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="end">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h1>WMS</h1>
+    <br>
+    <div class="members">
+      <div class="first">
+        <span>特约技术</span>
+        <h3 style="font-family: &#39;Franklin Gothic Medium&#39;, &#39;Arial Narrow&#39;, Arial, sans-serif;"></h3>
+      </div>
+      <div class="second">
+        <span>腐竹</span>
+        <h3 style="font-family: &#39;Franklin Gothic Medium&#39;, &#39;Arial Narrow&#39;, Arial, sans-serif;">wanys</h3>
+      </div>
+      <div class="third">
+        <span>网站页面建设</span>
+        <h3 style="font-family: &#39;Franklin Gothic Medium&#39;, &#39;Arial Narrow&#39;, Arial, sans-serif;">baixo2022</h3>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="nothing">
+    
+    <p>注：本页面为测试页面</p>
+    <p>MhcraftPage Beta Release 0.92</p>
+  </div>
+<script src="./WMS_files/index.js.下载"></script>
+<style>
+.end{
+  text-align: center;
+}
+.nothing {
+  background-color: #383838;
+  padding: 30px;
+  
+
+}
+.nothing{
+  text-align: center;
+}
+.first {
+    border-radius: 5px 5px 5px 5px;
+    background: #a1dbf7;
+    padding: 20px; 
+    width: 270px;
+    height: 270px; 
+    float: left;
+}
+.second {
+    border-radius: 5px 5px 5px 5px;
+    background: #a1a3f7;
+    padding: 20px; 
+    width:300px;
+    height: 270px; 
+    float: left;
+}
+.third {
+    border-radius: 5px 5px 5px 5px;
+    background: #b8a1f7;
+    padding: 20px; 
+    width: 270px;
+    height: 270px; 
+    float: left;
+}
+.serverlist{
+  text-align: center;
+  float: right;
+}
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .team {
+    width: 100%;
+  }
+}
+.team {
+    border-radius: 30px 30px 30px 30px;
+    background: #3ec2ff;
+    padding: 20px; 
+    width:300px;
+    height: 270px; 
+    float: left;
+}
+.list {
+    border-radius: 15px 30px 30px 15px;
+    background: #3effff;
+    padding: 20px; 
+    width:210px;
+    height: 210px; 
+    float: left;
+}
+.list2 {
+    border-radius: 30px 30px 30px 30px;
+    background: #3ec2ff;
+    padding: 20px; 
+    width:210px;
+    height: 210px; 
+    float: left;
+}
+.list3 {
+    border-radius: 30px 30px 30px 30px;
+    background: #3e6bff;
+    padding: 20px; 
+    width:210px;
+    height: 210px; 
+    float: left;
+}
+.list4 {
+    border-radius: 30px 15px 15px 30px;
+    background: #713eff;
+    padding: 20px; 
+    width:210px;
+    height: 210px; 
+    float: left;
+}
+@media screen and (max-width: 600px) {
+  .about {
+    width: 100%;
+  }
+}
+.about {
+    border-radius: 15px 30px 30px 5px;
+    background: #a4e2ff;
+    padding: 20px; 
+    width: 270px;
+    height: 270px; 
+    float: left;
+
+}
+@media screen and (max-width: 600px) {
+  .call {
+    width: 100%;
+  }
+}
+.call {
+    border-radius: 30px 15px 5px 30px;
+    background: #3effb5;
+    padding: 20px; 
+    width: 270px;
+    height: 270px; 
+    float: right;
+}
+li {
+  -webkit-perspective: 400px;
+          perspective: 400px;
+}
+.info {
+  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+          transform: rotate3d(1, 0, 0, 90deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  pointer-events: none;
+  background-color: rgba(26, 188, 156, 0.9);
+}
+
+.in-top .info {
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-animation: in-top 300ms ease 0ms 1 forwards;
+          animation: in-top 300ms ease 0ms 1 forwards;
+}
+
+.in-right .info {
+  -webkit-transform-origin: 100% 0%;
+          transform-origin: 100% 0%;
+  -webkit-animation: in-right 300ms ease 0ms 1 forwards;
+          animation: in-right 300ms ease 0ms 1 forwards;
+}
+
+.in-bottom .info {
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-animation: in-bottom 300ms ease 0ms 1 forwards;
+          animation: in-bottom 300ms ease 0ms 1 forwards;
+}
+
+.in-left .info {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-animation: in-left 300ms ease 0ms 1 forwards;
+          animation: in-left 300ms ease 0ms 1 forwards;
+}
+
+.out-top .info {
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  -webkit-animation: out-top 300ms ease 0ms 1 forwards;
+          animation: out-top 300ms ease 0ms 1 forwards;
+}
+
+.out-right .info {
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-animation: out-right 300ms ease 0ms 1 forwards;
+          animation: out-right 300ms ease 0ms 1 forwards;
+}
+
+.out-bottom .info {
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-animation: out-bottom 300ms ease 0ms 1 forwards;
+          animation: out-bottom 300ms ease 0ms 1 forwards;
+}
+
+.out-left .info {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-animation: out-left 300ms ease 0ms 1 forwards;
+          animation: out-left 300ms ease 0ms 1 forwards;
+}
+
+@-webkit-keyframes in-top {
+  from {
+    -webkit-transform: rotate3d(-1, 0, 0, 90deg);
+            transform: rotate3d(-1, 0, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+
+@keyframes in-top {
+  from {
+    -webkit-transform: rotate3d(-1, 0, 0, 90deg);
+            transform: rotate3d(-1, 0, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes in-right {
+  from {
+    -webkit-transform: rotate3d(0, -1, 0, 90deg);
+            transform: rotate3d(0, -1, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes in-right {
+  from {
+    -webkit-transform: rotate3d(0, -1, 0, 90deg);
+            transform: rotate3d(0, -1, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes in-bottom {
+  from {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+            transform: rotate3d(1, 0, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes in-bottom {
+  from {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+            transform: rotate3d(1, 0, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes in-left {
+  from {
+    -webkit-transform: rotate3d(0, 1, 0, 90deg);
+            transform: rotate3d(0, 1, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes in-left {
+  from {
+    -webkit-transform: rotate3d(0, 1, 0, 90deg);
+            transform: rotate3d(0, 1, 0, 90deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes out-top {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(-1, 0, 0, 104deg);
+            transform: rotate3d(-1, 0, 0, 104deg);
+  }
+}
+@keyframes out-top {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(-1, 0, 0, 104deg);
+            transform: rotate3d(-1, 0, 0, 104deg);
+  }
+}
+@-webkit-keyframes out-right {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, -1, 0, 104deg);
+            transform: rotate3d(0, -1, 0, 104deg);
+  }
+}
+@keyframes out-right {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, -1, 0, 104deg);
+            transform: rotate3d(0, -1, 0, 104deg);
+  }
+}
+@-webkit-keyframes out-bottom {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(1, 0, 0, 104deg);
+            transform: rotate3d(1, 0, 0, 104deg);
+  }
+}
+@keyframes out-bottom {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(1, 0, 0, 104deg);
+            transform: rotate3d(1, 0, 0, 104deg);
+  }
+}
+@-webkit-keyframes out-left {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 1, 0, 104deg);
+            transform: rotate3d(0, 1, 0, 104deg);
+  }
+}
+@keyframes out-left {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+            transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 1, 0, 104deg);
+            transform: rotate3d(0, 1, 0, 104deg);
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0 0 50px;
+}
+ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+li {
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  padding: 0;
+  list-style: none;
+  
+}
+li a {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  border-radius: 4px;
+}
+li h3 {
+  margin: 0;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+}
+li p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+li .normal {
+  width: 100%;
+  height: 100%;
+  background-color: #ECF0F1;
+  color: rgba(52, 73, 94, 0.6);
+  box-shadow: inset 0 2px 20px #e6ebed;
+  text-align: center;
+  font-size: 50px;
+  line-height: 200px;
+}
+li .normal svg {
+  pointer-events: none;
+  width: 50px;
+}
+li .normal svg path {
+  fill: rgba(52, 73, 94, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+}
+
+h1 {
+  margin: 0 auto 5px;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Bree Serif', serif;
+}
+
+.container {
+  width: 840px;
+  margin: 0 auto;
+}
+
+header {
+  font-family: 'Bree Serif', serif;
+  text-align: center;
+  margin: 50px 0 25px;
+  color: #34495E;
+}
+header p {
+  margin: 0;
+  color: rgba(52, 73, 94, 0.4);
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 400px;
+  text-align: center;
+  background-image: url("2022-04-25_20.51.45.png");
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(29, 29, 29);
+}
+ 
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  
+  text-decoration: none;
+  float:right;
+  
+}
+.topnav{
+  position: fixed;
+  width: 100%;
+  z-index:999
+}
+ 
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+li.sn{
+    width: 260px;
+    height: 5%;
+}
+.dfnb{
+  background-image: url("hard-drive.svg");
+}
+.dfnb1{
+  background-image: url("list.svg");
+}
+.dfnb2{
+  background-image: url("list.svg");
+}
+.dfnb3{
+  background-image: url("sliders.svg");
+}
+</style>
+<script>
+
+
+
+var nodes  = document.querySelectorAll('li'),
+    _nodes = [].slice.call(nodes, 0);
+
+var getDirection = function (ev, obj) {
+    var w = obj.offsetWidth,
+        h = obj.offsetHeight,
+        x = (ev.pageX - obj.offsetLeft - (w / 2) * (w > h ? (h / w) : 1)),
+        y = (ev.pageY - obj.offsetTop - (h / 2) * (h > w ? (w / h) : 1)),
+        d = Math.round( Math.atan2(y, x) / 1.57079633 + 5 ) % 4;
+  
+    return d;
+};
+
+var addClass = function ( ev, obj, state ) {
+    var direction = getDirection( ev, obj ),
+        class_suffix = "";
+    
+    obj.className = "";
+    
+    switch ( direction ) {
+        case 0 : class_suffix = '-top';    break;
+        case 1 : class_suffix = '-right';  break;
+        case 2 : class_suffix = '-bottom'; break;
+        case 3 : class_suffix = '-left';   break;
+    }
+    
+    obj.classList.add( state + class_suffix );
+};
+
+
+_nodes.forEach(function (el) {
+    el.addEventListener('mouseover', function (ev) {
+        addClass( ev, this, 'in' );
+    }, false);
+
+    el.addEventListener('mouseout', function (ev) {
+        addClass( ev, this, 'out' );
+    }, false);
+});
+</script>
+
+</body></html>
